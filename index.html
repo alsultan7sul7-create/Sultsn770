@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}الصفحة الرئيسية - نظام توقع أداء الطلاب{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+            <div class="text-white">
+                <h1 class="display-4 fw-bold mb-4">
+                    نظام توقع أداء الطلاب
+                </h1>
+                <p class="lead mb-4">
+                    اكتشف إمكاناتك الأكاديمية باستخدام الذكاء الاصطناعي وخوارزمية الانحدار الخطي المتقدمة
+                </p>
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5>ذكاء اصطناعي متقدم</h5>
+                        <p class="text-white-75">نموذج مدرب على 10,000 عينة بدقة 98.90%</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>تنبؤات دقيقة</h5>
+                        <p class="text-white-75">توقعات موثوقة لأدائك الأكاديمي المستقبلي</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-user-plus me-2"></i>
+                        إنشاء حساب جديد
+                    </a>
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-sign-in-alt me-2"></i>
+                        تسجيل الدخول
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="fw-bold text-primary">كيف يعمل النظام؟</h3>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <span class="fw-bold">1</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">أدخل بياناتك الأكاديمية</h6>
+                                    <small class="text-muted">ساعات الدراسة، الدرجات السابقة، النوم، والأنشطة</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <span class="fw-bold">2</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">تحليل ذكي للبيانات</h6>
+                                    <small class="text-muted">خوارزمية الانحدار الخطي تحلل المعلومات</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                    <span class="fw-bold">3</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">احصل على التوقع والتوصيات</h6>
+                                    <small class="text-muted">نتائج دقيقة مع نصائح لتحسين الأداء</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Statistics Section -->
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <div class="stats-card">
+                <i class="fas fa-users fa-2x mb-3"></i>
+                <h3 class="fw-bold">10,000+</h3>
+                <p class="mb-0">عينة تدريب</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-card">
+                <i class="fas fa-percentage fa-2x mb-3"></i>
+                <h3 class="fw-bold">98.90%</h3>
+                <p class="mb-0">دقة النموذج</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-card">
+                <i class="fas fa-clock fa-2x mb-3"></i>
+                <h3 class="fw-bold">فوري</h3>
+                <p class="mb-0">نتائج سريعة</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-card">
+                <i class="fas fa-shield-alt fa-2x mb-3"></i>
+                <h3 class="fw-bold">آمن</h3>
+                <p class="mb-0">حماية البيانات</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
