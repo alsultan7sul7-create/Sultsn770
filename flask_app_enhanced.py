@@ -144,10 +144,19 @@ def verify_password(password, hashed):
 
 @app.route('/')
 def index():
-    """الصفحة الرئيسية"""
     if 'user_id' in session:
         return redirect(url_for('dashboard'))
-    return render_template('index.html')
+    return '''
+    <html>
+    <head><title>نظام توقع أداء الطلاب</title></head>
+    <body style="font-family: Arial; text-align: center; padding: 50px;">
+        <h1>🎓 نظام توقع أداء الطلاب</h1>
+        <p>نظام ذكي لتوقع أداء الطلاب باستخدام الذكاء الاصطناعي</p>
+        <a href="/dashboard" style="padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">لوحة التحكم</a>
+    </body>
+    </html>
+    '''
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -598,4 +607,5 @@ if __name__ == '__main__':
         host='0.0.0.0',
         port=port,
         debug=os.environ.get('FLASK_ENV') == 'development'
+
     )
